@@ -18,7 +18,6 @@ const cookieOption={
 //create register
 router.post('/register',upload.single('avatar'),async(req,res)=>{
         const {username,email,password}=req.body;
-        console.log('File details:', req.file); // Log file detail
      
         if (!username || !email || !password) {
           return res.status(400).json('please fill all credentials!')

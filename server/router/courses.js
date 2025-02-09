@@ -42,7 +42,7 @@ const { title, description, category, createdBy} = req.body;
     });
 
     console.log("Course created successfully, sending response");
-      course.save ();
+    await  course.save ();
       res.status(201).json({
         success: true,
         message: 'coursde is created successsfuly',
